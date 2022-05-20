@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <!-- <script src="/js/jQuery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/index.js"></script> -->
+    <style>
+        div#bigBox {width:800px; height:300px; border:1px solid black; text-align:center; }
+        #seForm {border: 1px solid black; margin-top:10px;}
+    </style> 
+    <script>
+        function clear_result() {
+            document.getElementById("contentText").value = "";
+            }
+    </script>
+
+<script>
+    function example_text() {
+        document.getElementById("contentText").value = "Bản sắc văn hóa dân tộc là giá trị cốt lõi nhất của nền văn hóa, thể hiện tâm hồn, cốt cách, tình cảm, lý trí, sức mạnh của dân tộc, tạo nên chất keo kết nối các cộng đồng người gắn bó, đoàn kết với nhau để cùng tồn tại và phát triển. Những giá trị của bản sắc văn hóa dân tộc là một trong những động lực to lớn đảm bảo sự ổn định và phát triển bền vững của quốc gia dân tộc. Bản sắc văn hóa dân tộc Việt Nam được hình thành, phát triển gắn liền với lịch sử dựng nước, giữ nước và quá trình xây dựng chủ nghĩa xã hội. Bản sắc văn hóa dân tộc là tổng hòa những giá trị văn hóa bền vững, phản ánh diện mạo, sắc thái, cốt cách, tâm hồn, tâm lý… của một dân tộc, được thường xuyên hun đúc, bổ sung và lan tỏa trong lịch sử dân tộc, trở thành tài sản tinh thần đặc sắc, tạo nên sức mạnh gắn kết cộng đồng và để phân biệt sự khác nhau giữa dân tộc này với dân tộc khác trong cộng đồng nhân loại. Tuy nhiên, bên cạnh những mặt tích cực còn có mặt tiêu cực của nó đó là nguy cơ xói mòn, phai nhạt và biến dạng hệ thống giá trị trong bản sắc văn hóa dân tộc, sự du nhập của lối sống tư sản, suy giảm thuần phong mĩ tục, sự chống phá của chủ nghĩa đế quốc và các thế lực thù địch trên lĩnh vực tư tưởng, văn hóa. Những giá trị tinh hoa văn hóa truyền thống tốt đẹp của dân tộc được xây dựng và ghi nhận bởi những chiến công hi sinh thầm lặng của biết bao thế hệ người dân Việt Nam. Nó là kết tinh những gì là tinh túy nhất của dân tộc để rồi chính những giá trị đó lại lung linh tỏa sáng, soi sáng con đường chúng ta đi. Không chỉ bây giờ mà mãi mãi về sau những giá trị tinh hoa văn hóa của dân tộc sẽ là hành trang, động lực để cho thanh niên Việt Nam chúng ta tiến vào kỷ nguyên mới tô thắm nên truyền thống ngàn năm văn hiến của dân tộc.";
+        }
+</script>
+</head>
+
+<body>
+    <a href="#top" id="arrowTop" class="DisplayNone page-scroll"> &#8593; </a>
+    <!-- Heaser Area Start -->
+    <header class="header-area">
+        <!-- Navigation start -->
+        <nav class="navbar navbar-custom tb-nav" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tb-nav-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo page-scroll notranslate" translate="no" href="#top">
+                        <!-- <h2>res<span>oo</span>mer</h2> -->
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="tb-nav-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--<li class="active"><a class="page-scroll" href="#top"><b>OO</b></a></li>-->
+                        <li><a class="page-scroll" href="/blog" title="Blog">Blogs</a></li>
+                        <!-- <li><a class="page-scroll" href="#extension" title="Tiện ích mở rộng">Tiện ích mở rộng</a></li>
+                        <li><a class="page-scroll" href="#useIt" title="Nó hoạt động như thế nào">Nó hoạt động như thế
+                                nào</a></li>
+                        <li><a class="page-scroll" href="#entreprise" title="PREMIUM">PREMIUM</a></li>
+                        <li><a class="page-scroll" href="#contact" title="Tiếp xúc">Tiếp xúc</a></li> -->
+                        <li><a href="/login" title="Đăng nhập">Đăng nhập</a></li>
+                    </ul>
+                    <ul class="collapse navbar-collapse" id="tb-nav-collapse">
+                        <li><a class="page-scroll" href="/login" title="profile">{{useraccount}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navigation end -->
+ 
+    <!-- hero-section -->
+    <section class="hero-section static-bg" id="top" style="height:auto !important; clear:both;">
+        <div class="container-fluid" style="float:left; width:100%;">
+            <div class="row" id="headerFeature">
+                <!-- Hero Title -->
+                <!-- Hero Subtitle -->
+                <!--<h5>we advice + we design + we develope</h5>-->
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="about-us-left no-padding">
+                        <form id="resoomerForm" class="resoomerForm" method="POST" action="">
+                            <fieldset class="resoomerFormConteneur">
+                                <div class="conteneurAPI">
+                                    <div class="OptionsWebView">
+                                        <div class="topConteneurAPI">
+                                            <ul class="optionsAPI">
+                                                <li class="li_1">
+                                                    <a onClick="example_text()"  title="Ví dụ văn bản"
+                                                    class="formatResoomer" type="file">Ví dụ văn bản</a>
+                                                    &nbsp;
+                                                    <a onclick="clear_result()" href="" title="Xóa văn bản" class="formatResoomer"><i class="fa fa-trash">&nbsp;</i></a>
+                                                    <span class="DisplayForMobile"><br /></span>
+                                                </li>
+                                                <!-- <li class="li_2">
+                                                    <input type="button" id="btnSendText_V2"
+                                                        class="btnSendText floatRight" value="Chuyển đổi">
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                        <i id="noticeForText"
+                                            style="color:#666; font-size:12px; clear:both; display:block; margin-top:-10px;">Chỉ
+                                            các văn bản tranh luận</i>
+                                        <p id="conteneurNoticeSizeText" class="DisplayNone"
+                                            style="text-align:right; margin:0px; padding: 0 15px 0 0;">
+                                            <span id="noticeSizeText" style="font-size:12px;">&nbsp;</span>
+                                        </p>
+                                    </div>
+                                    <div class="OptionsMobileView">
+                                        <div class="topConteneurAPI">
+                                            <p>
+                                                <a onClick="example_text()" title="Ví dụ văn bản"
+                                                    class="formatResoomer" style="float:left;">Ví dụ văn bản</a>
+                                                <a onclick="clear_result()" title="Xóa văn bản"
+                                                    class="formatResoomer" style="float:right; margin-right:5px;">Xóa
+                                                    văn bản</a>
+                                            </p>
+                                            <p style="clear:both;">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <form method="post">
+                                        <textarea id="contentText" name="contentText" placeholder="Sao chép và dán văn bản hoặc URL bài viết của bạn ở đây">{{contentText}}</textarea>
+                                        <div>
+                                            <input type="submit"  name = "Summary" class="btnSendText" value="Summary" >
+                                            <input type="submit"  name = "Correct" class="btnSendText" value="Correct" >
+                                        </div>
+                                            
+                                        <div class="OptionsMobileView">
+                                        </div>
+                                    </form>
+                                </div>
+                                <ul class="optionsAPI">
+                                    <li  class="li_1">
+                                        <form action="/upload-audio" method="POST" enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <label>Select file audio</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" name="audio" id="audio">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btnSendText">Upload</button>
+                                        </form>
+                                    </li>
+                                    <li  class="li_2">
+                                        <form action="/upload-image" method="POST" enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <label>Select file image</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" name="image" id="image">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btnSendText">Upload</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                        <a href="#rightResoomer" class="page-scroll DisplayNone" id="goToResumer">&nbsp;</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="about-us-left no-padding">
+                        <form id="resoomerForm" class="resoomerForm" action="">
+                            <fieldset class="resoomerFormConteneur">
+                                <div class="conteneurAPI">
+                                    <div class="OptionsWebView">
+                                        <div class="topConteneurAPI">
+                                            <ul class="optionsAPI">
+                                                <li class="li_1">
+                                                    <a onClick="setExemple();" title="Kết Quả"
+                                                        class="formatResoomer">Kết Quả</a>
+                                                    &nbsp;
+                                                    <span class="DisplayForMobile"><br /></span>
+                                                    <a onclick="clear_result()" href = "" title="Xóa văn bản"
+                                                        class="formatResoomer">Xóa văn bản</a>
+                                                </li>
+                                                <li class="li_2">
+                                                    <input type="button" id="btnSendText_V2"
+                                                        class="btnSendText floatRight" value="Delete">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <i id="noticeForText"
+                                            style="color:#666; font-size:12px; clear:both; display:block; margin-top:-10px;">Nội dung trả về</i>
+                                        <p id="conteneurNoticeSizeText" class="DisplayNone"
+                                            style="text-align:right; margin:0px; padding: 0 15px 0 0;">
+                                            <span id="noticeSizeText" style="font-size:12px;">&nbsp;</span>
+                                        </p>
+                                    </div>
+                                    <div class="OptionsMobileView">
+                                        <div class="topConteneurAPI">
+                                            <p>
+                                                <a onClick="setExemple();" title="Kết Quả"
+                                                    class="formatResoomer" style="float:left;">Kết Quả</a>
+                                                <a onclick="clear_result()"  href = "" title="Xóa văn bản"
+                                                    class="formatResoomer" style="float:right; margin-right:5px;">Xóa
+                                                    văn bản</a>
+                                            </p>
+                                            <p style="clear:both;">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <form action="">
+                                        <textarea id="contentText" name="contentText" placeholder="Nội dung trả về">{{result}}</textarea>
+                                        <div>
+                                            <input type="button"  class="btnSendText" value="Copy">
+                                        </div>
+
+                                        <div class="OptionsMobileView">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- <input type="hidden" name="langSite" value="vi" />
+                                <input type="hidden" name="sampleText" id="sampleText" value="" />
+                                <input type="hidden" name="adBlockerDetect" id="adBlockerDetect" value="0" />
+                                <input type="hidden" name="enableProcess" id="enableProcess" value="0" />
+                                <input type="hidden" name="issetPost" id="issetPost" value="0" />
+                                <input type="hidden" name="keyForm" id="keyForm"
+                                    value="1647970713-391279052-829313901-19619091" /> -->
+                            </fieldset>
+                        </form>
+                        <a href="#rightResoomer" class="page-scroll DisplayNone" id="goToResumer">&nbsp;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Of Hero Section -->
+    <!-- About Us Section -->
+    <section class="about-us" id="about" style="clear:both;">
+        <div class="container">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <h2 class="section-title text-center fontWhite">VỀ CHÚNG TÔI</h2>
+            <p class="sub-title text-center fontWhite" style="max-width:1000px; margin-left:auto; margin-right:auto;">
+                Để giúp bạn <b class="fontLight"><span>tóm tắt và phân tích</span></b> các văn bản tranh luận, bài viết,
+                văn bản khoa học, văn bản lịch sử cũng như phân tích cấu trúc công việc của bạn, Chúng tôi cung cấp cho
+                bạn "Công cụ tóm tắt văn bản": một công cụ giáo dục xác định và tóm tắt những <b class="fontLight">ý
+                    <span>tưởng và sự kiện quan trọng</span></b> của tài liệu của bạn. Tóm tắt trong 1-Click, đi đến ý
+                chính hoặc đọc lướt qua để sau đó bạn có thể phân tích diễn giải các văn bản của bạn một cách nhanh
+                chóng và phát triển các <b class="fontLight"><span>tổng hợp</span></b> của bạn.<br />
+
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+    </section>
+    <!-- End Of About Us Section -->
+
+    <!-- Our Services -->
+
+    <section class="our-services-section section-padding" id="professionnel">
+        <div class="container">
+            <!-- Our service Section Title -->
+            <h2 class="section-title text-center">AI LÀ NGƯỜI CHÚNG TÔI HƯỚNG ĐẾN?</h2>
+            <div class="row our-services">
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-lg-offset-1 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-group"></i>
+                        </div>
+                        <div class="media-body">
+                            <!-- Single service title -->
+                            <h3 class="media-heading">SINH VIÊN</h3>
+                            <p>
+                                Tóm tắt các bài học và trang Wikipedia của bạn trong vài giây giúp tăng
+                                năng suất học tập của bạn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-book"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">GIÁO SƯ</h3>
+                            <p>Xác định các ý tưởng và lập luận quan trọng nhất của văn bản để bạn có thể chuẩn bị bài
+                                học của mình.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-lg-offset-1 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                        <div class="media-body">
+
+                            <h3 class="media-heading">NHÀ BÁO</h3>
+                            <p>Nếu bạn thích thông tin tóm tắt các sự kiện chính quan trọng, thì đây là nơi dành cho
+                                bạn!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-tasks"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">NGƯỜI HIỆU CHỈNH</h3>
+                            <p>Xác định và hiểu rất nhanh các sự kiện và ý tưởng của các văn bản của bạn</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-lg-offset-1 col-xs-12 single-service" style="clear:both;">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-print"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">THÔNG CÁO BÁO CHÍ</h3>
+                            <p>Với sự giúp đỡ của chúng tôi, đi đến ý tưởng chính của các bài viết của bạn để viết các
+                                lập luận và phê bình của bạn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-eye"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">NGƯỜI ĐỌC</h3>
+                            <p>Tiết kiệm thời gian để tóm tắt các tài liệu của bạn, nắm được thông tin liên quan nhanh
+                                chóng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-lg-offset-1 col-xs-12 single-service" style="clear:both;">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-bookmark"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">THƯ VIỆN</h3>
+                            <p>Cần tóm tắt các bài thuyết trình của cuốn sách của bạn? Xác định các đối số trong một vài
+                                giây.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-folder-open"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">NGƯỜI LÀM VIỆC THƯ VIỆN</h3>
+                            <p>Quá nhiều tài liệu? Đơn giản hóa bài đọc của bạn, làm cho bài đọc của bạn dễ dàng hơn với
+                                một công cụ máy tính để bàn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-lg-offset-1 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-tags"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">NHÀ VĂN</h3>
+                            <p>Cần tóm tắt các chương của bạn? Đi vào trung tâm của ý tưởng của bạn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">NHÀ XUẤT BẢN</h3>
+                            <p>Xác định nhanh chóng các cuốn sách của bạn hoặc ý tưởng của tác giả. Tóm tắt những điểm
+                                chính quan trọng nhất.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-lg-offset-1 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-leaf"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">VIỆN BẢO TÀNG</h3>
+                            <p>Từ bây giờ, hãy tạo bản tóm tắt nhanh chóng về bản trình bày của các nghệ sĩ của bạn và
+                                tác phẩm nghệ thuật của họ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service -->
+                <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12 single-service">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-flag"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">TỔ CHỨC</h3>
+                            <p>Xác định các đoạn quan trọng nhất trong các văn bản có chứa rất nhiều từ để phân tích chi
+                                tiết.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row mt-30 mb-30">
+                <div class="col-md-12 text-center">
+                    <!-- Footer Copy Right Text -->
+                    <div class="copyright-info">
+                        <!-- <a href="#" onclick="return false;">Res<b><span>oo</span></b>mer là một dự án được mã hóa với
+                            <span><i class="fa fa-heart"></i></span>
+                        </a>
+                        <br /> -->
+                        <!-- <a href="#" onclick=""> | </a> -->
+                        <a href="#" onclick="">&copy; 2022 | Bảo vệ quyền sở hữu </a><a href="#">| <u>Thông
+                                báo pháp lý</u></a><a href="#"> | <u>Trợ giúp</u></a><a href="#"> | <u>Thương
+                                hiệu</u></a>
+                    </div>
+
+                    <!-- Footer Social Icons -->
+                    <div class="social-icons mt-30">
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">
+                <b>TAGS</b><br />
+                <a href="#" title="Tóm tắt văn bản" class="linkFooter">Tóm tắt văn bản</a> |
+                <a href="#" title="Phần mềm tóm tắt văn bản" class="linkFooter">Phần mềm tóm tắt
+                    văn bản</a> |
+                <a href="#" title="Tóm tắt văn bản tự động" class="linkFooter">Tóm tắt văn bản tự
+                    động</a> |
+                <a href="#" title="Tóm tắt sách hoặc tài liệu" class="linkFooter">Tóm tắt sách
+                    hoặc tài liệu</a> |
+                <a href="#" title="Phần mềm tóm tắt văn bản" class="linkFooter">Phần mềm tóm tắt
+                    văn bản</a> |
+                <a href="#" title="Công cụ tóm tắt văn bản tự động" class="linkFooter">Công cụ
+                    tóm tắt văn bản tự động</a>
+                <a href="#" title="Tóm tắt" class="linkFooter">Tóm tắt</a> |
+                <a href="#" title="Người tóm tắt nội dung" class="linkFooter">Người tóm tắt nội
+                    dung</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <!-- Bootstrap JS -->
+    <script>
+        $(window).load(function () {
+            $("#contentText").keyup();
+            $("#loaderContent_V2").addClass("DisplayNone");
+            $("#conteneurBar").removeClass("initBar");
+        });
+        // Scroll TOP
+        $(window).scroll(function () {
+            var scrollPositionValue = $(window).scrollTop();
+            if (scrollPositionValue > 100) {
+                $('#arrowTop').removeClass("DisplayNone");
+            } else {
+                $('#arrowTop').addClass("DisplayNone");
+            }
+        });
+    </script>
+    <!-- accordion -->
+    <script>
+        //$("#contentText").keyup();
+        //document.getElementById("btnSendText_V2").click();
+        $(document).ready(function ($) {
+            $('#accordion').find('.accordion-toggle').click(function () {
+                //Expand or collapse this panel
+                $(this).next().slideToggle('fast');
+                //Hide the other panels
+                $(".accordion-content").not($(this).next()).slideUp('fast');
+            });
+            $('#accordion_2').find('.accordion-toggle').click(function () {
+                //Expand or collapse this panel
+                $(this).next().slideToggle('fast');
+                //Hide the other panels
+                $("#accordion_2 .accordion-content").not($(this).next()).slideUp('fast');
+            });
+        });
+    </script>
+    
+    <style type="text/css">
+        .accordion-toggle {
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            display: none;
+        }
+
+        .accordion-content.default {
+            display: block;
+        }
+    </style>
+</body>
+
+</html>

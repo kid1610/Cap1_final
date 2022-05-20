@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+</head>
+
+<body>
+    <!-- Heaser Area Start -->
+    <header class="header-area">
+        <!-- Navigation start -->
+        <nav class="navbar navbar-custom tb-nav" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tb-nav-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo page-scroll notranslate" translate="no" href="#top">
+                        <!-- <h2>res<span>oo</span>mer</h2> -->
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="tb-nav-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- hero-section -->
+    <section class="about-us">
+        <div class="container-fluid">
+            <div class="row" id="headerFeature">
+                <!-- Hero Title -->
+                <h2 class="fontLight">
+                    <br />
+                    Đăng nhập
+                </h2>
+                <p>&nbsp;</p>
+                <!-- Hero Subtitle -->
+                <!--<h5>we advice + we design + we develope</h5>-->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12 no-padding">
+                    <!-- About Us Left -->
+                    <div class="about-us-left">
+                        <!-- About Us Info -->
+                        <h2 class="section-title-left">TÀI KHOẢN CỦA TÔI</h2>
+                        <form id="formConnexion" action="" method="post" class="form-horizontal">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="loginInput"
+                                        class="col-sm-3 control-label fontLight textAlignLeft">Email</label>
+                                    <div class="col-sm-9">
+                                        <input name="username" id = "username" type="text" class="form-control borderGray textColorDefaut"
+                                           >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPSWD" class="col-sm-3 control-label fontLight textAlignLeft">Mật
+                                        khẩu</label>
+                                    <div class="col-sm-9">
+                                        <input name="password" type="password"
+                                            class="form-control borderGray textColorDefaut" id="password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="createCookie"
+                                        class="col-sm-3 control-label fontLight textAlignLeft">&nbsp;</label>
+                                    <div class="col-sm-9">
+                                        <label for="createCookie" class="fontLight">
+                                            <input name="createCookie" type="checkbox" id="createCookie" value="1" />
+                                            Giữ cho tôi đăng nhập
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button name="connexion" type="submit" value="SIGNIN" class="btnSendText">Đăng nhập</button>
+                                        &nbsp; <span>&bull;</span> &nbsp;
+                                        <a style="padding-top:10px; padding-bottom:10px;" href="/register"
+                                            class="formatResoomer" title="Tạo một tài khoản">Tạo một tài khoản</a>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 no-padding">
+                    <!-- About Us Right -->
+                    <div class="about-us-right" style="background:#f3f3f3;">
+                        <p>&nbsp;</p>
+                        <h2 class="section-title-left">Quên mật khẩu</h2>
+                        <!-- Our Features -->
+                        <form id="formPasseOublier" action="" method="post" class="form-horizontal">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="loginInputForget"
+                                        class="col-sm-2 control-label fontLight textAlignLeft">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" name="email" class="form-control borderGray textColorDefaut"
+                                            id="loginInputForget">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="button" name="resetPassword" class="btnSendText">Đặt lại mật
+                                            khẩu</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row mt-30 mb-30">
+                <div class="col-md-12 text-center">
+                    <!-- Footer Copy Right Text -->
+                    <div class="copyright-info">
+                        <!-- <a href="#" onclick="return false;">Res<b><span>oo</span></b>mer là một dự án được mã hóa với
+                            <span><i class="fa fa-heart"></i></span>
+                        </a>
+                        <br /> -->
+                        <!-- <a href="#" onclick=""> | </a> -->
+                        <a href="#" onclick="">&copy; 2022 | Bảo vệ quyền sở hữu </a><a href="#">| <u>Thông
+                                báo pháp lý</u></a><a href="#"> | <u>Trợ giúp</u></a><a href="#"> | <u>Thương
+                                hiệu</u></a>
+                    </div>
+
+                    <!-- Footer Social Icons -->
+                    <div class="social-icons mt-30">
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">
+                <b>TAGS</b><br />
+                <a href="#" title="Tóm tắt văn bản" class="linkFooter">Tóm tắt văn bản</a> |
+                <a href="#" title="Phần mềm tóm tắt văn bản" class="linkFooter">Phần mềm tóm tắt
+                    văn bản</a> |
+                <a href="#" title="Tóm tắt văn bản tự động" class="linkFooter">Tóm tắt văn bản tự
+                    động</a> |
+                <a href="#" title="Tóm tắt sách hoặc tài liệu" class="linkFooter">Tóm tắt sách
+                    hoặc tài liệu</a> |
+                <a href="#" title="Phần mềm tóm tắt văn bản" class="linkFooter">Phần mềm tóm tắt
+                    văn bản</a> |
+                <a href="#" title="Công cụ tóm tắt văn bản tự động" class="linkFooter">Công cụ
+                    tóm tắt văn bản tự động</a>
+                <a href="#" title="Tóm tắt" class="linkFooter">Tóm tắt</a> |
+                <a href="#" title="Người tóm tắt nội dung" class="linkFooter">Người tóm tắt nội
+                    dung</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
